@@ -1,16 +1,63 @@
 version: 2
 updates:
-  # Enable version updates for npm on the main appcenter-cli package
-  - package-ecosystem: "npm"
-    # Look for `package.json` and `lock` files in the `root` directory
-    directory: "/"
-    # Check the npm registry for updates every weekday
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 20
-  # Enable version updates for npm on the inner appcenter-file-upload-client-node package
-  - package-ecosystem: "npm"
-    directory: "/appcenter-file-upload-client-node"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 20
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: date-fns
+    versions:
+    - 2.17.0
+    - 2.18.0
+    - 2.19.0
+    - 2.20.3
+    - 2.21.0
+  - dependency-name: eslint
+    versions:
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+    - 7.24.0
+  - dependency-name: autorest
+    versions:
+    - 3.0.6335
+    - 3.0.6336
+    - 3.0.6337
+    - 3.0.6338
+    - 3.0.6339
+    - 3.1.1
+    - 3.1.2
+    - 3.1.3
+    - 3.1.4
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.24
+    - 14.14.25
+    - 14.14.26
+    - 14.14.28
+    - 14.14.30
+    - 14.14.31
+    - 14.14.33
+    - 14.14.35
+    - 14.14.37
+  - dependency-name: chai
+    versions:
+    - 4.3.0
+    - 4.3.1
+    - 4.3.3
+  - dependency-name: nock
+    versions:
+    - 13.0.10
+    - 13.0.7
+    - 13.0.8
+    - 13.0.9
+  - dependency-name: fast-xml-parser
+    versions:
+    - 3.18.0
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+    - 4.5.0
